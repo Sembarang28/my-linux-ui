@@ -1,0 +1,25 @@
+// Neo-brutalism: thick dark border, hard offset shadow, medium radius
+layout {
+    focus-ring {
+        off
+    }
+    border {
+        on
+        width 3
+        active-color "#1C1412"
+        inactive-color "#6B5C55"
+        urgent-color "#FF8F86"
+    }
+    shadow {
+        on
+        softness 0
+        spread 0
+        offset x=5 y=5
+        color "#1C1412"
+    }
+}
+
+window-rule {
+    geometry-corner-radius 12
+    clip-to-geometry true
+}

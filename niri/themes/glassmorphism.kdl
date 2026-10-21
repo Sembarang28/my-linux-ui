@@ -1,0 +1,39 @@
+// Dark glassmorphism: no focus ring, thin smoked border, big radius, dark soft shadow
+layout {
+    focus-ring {
+        off
+    }
+    border {
+        on
+        width 1
+        active-color "#802B2F4A"
+        inactive-color "#401A1E30"
+        urgent-color "#C9545F"
+    }
+    shadow {
+        on
+        softness 40
+        spread 2
+        offset x=0 y=8
+        color "#8C0A0C18"
+    }
+}
+
+window-rule {
+    geometry-corner-radius 16
+    clip-to-geometry true
+}
+
+// Translucent + blurred app windows (applies to every window)
+window-rule {
+    opacity 0.8
+    background-effect {
+        blur true
+    }
+}
+
+// Keep video / image viewers fully opaque
+window-rule {
+    match app-id=r#"^(mpv|vlc|org\.gnome\.Loupe|imv)$"#
+    opacity 1.0
+}

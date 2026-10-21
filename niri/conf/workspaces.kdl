@@ -1,0 +1,11 @@
+// Ten fixed workspaces so Mod+1..0 always work. The bar only shows the active one and counts occupied ones.
+workspace "1"
+workspace "2"
+workspace "3"
+workspace "4"
+workspace "5"
+workspace "6"
+workspace "7"
+workspace "8"
+workspace "9"
+workspace "10"

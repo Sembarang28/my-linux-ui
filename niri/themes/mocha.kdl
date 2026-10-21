@@ -1,0 +1,50 @@
+// Mocha Shell look (mocha-shell.html): full-size tiled windows flush under the bar,
+// translucent blurred glass, floating windows get a 14px radius, mauve border and a soft shadow.
+layout {
+    gaps 0
+    focus-ring {
+        off
+    }
+    border {
+        off
+    }
+    shadow {
+        off
+    }
+}
+
+// Every window: glass (blurred, slightly translucent)
+window-rule {
+    opacity 0.9
+    background-effect {
+        blur true
+    }
+}
+
+// Floating windows: rounded, hairline border (focused = mauve at 55%), big soft shadow
+window-rule {
+    match is-floating=true
+    geometry-corner-radius 14
+    clip-to-geometry true
+    draw-border-with-background false
+    border {
+        on
+        width 1
+        active-color "#cba6f78c"
+        inactive-color "#cdd6f41a"
+        urgent-color "#f38ba8"
+    }
+    shadow {
+        on
+        softness 50
+        spread 0
+        offset x=0 y=18
+        color "#00000073"
+    }
+}
+
+// Keep video / image viewers fully opaque
+window-rule {
+    match app-id=r#"^(mpv|vlc|org\.gnome\.Loupe|imv)$"#
+    opacity 1.0
+}

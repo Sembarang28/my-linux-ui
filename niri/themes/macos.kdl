@@ -1,0 +1,39 @@
+// macOS look: no focus ring, hairline border, 10px window radius, soft macOS-style shadow.
+// Only visuals; the scrolling-column layout and keybinds are untouched.
+layout {
+    focus-ring {
+        off
+    }
+    border {
+        on
+        width 1
+        active-color "#40FFFFFF"
+        inactive-color "#20FFFFFF"
+        urgent-color "#FF453A"
+    }
+    shadow {
+        on
+        softness 50
+        spread 4
+        offset x=0 y=12
+        color "#99000000"
+    }
+}
+
+window-rule {
+    geometry-corner-radius 10
+    clip-to-geometry true
+}
+
+window-rule {
+    opacity 0.95
+    background-effect {
+        blur true
+        saturation 0
+    }
+}
+
+window-rule {
+    match app-id=r#"^(mpv|vlc|org\.gnome\.Loupe|imv)$"#
+    opacity 1.0
+}

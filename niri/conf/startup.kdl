@@ -1,0 +1,9 @@
+// The bar/shell is Quickshell; which theme starts is chosen by ~/.config/niri/theme
+spawn-sh-at-startup "$HOME/.config/niri/scripts/start-shell.sh"
+
+// Don't show the "Important Hotkeys" overlay on startup
+hotkey-overlay {
+    skip-at-startup
+}
+
+screenshot-path "~/Pictures/Screenshots/Screenshot from %Y-%m-%d %H-%M-%S.png"

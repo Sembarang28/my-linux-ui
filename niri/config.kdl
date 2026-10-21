@@ -1,0 +1,13 @@
+// niri main config: only includes. Edit the pieces in conf/ and themes/.
+include "conf/environment.kdl"
+include "conf/input.kdl"
+include "conf/output.kdl"
+include "conf/workspaces.kdl"
+include "conf/layout.kdl"
+include "conf/animations.kdl"
+include "conf/rules.kdl"
+include "conf/startup.kdl"
+include "conf/binds.kdl"
+
+// Active look (glassmorphism by default). Switch with scripts/theme.sh or Mod+Alt+G / N / M / T.
+include "theme.kdl"

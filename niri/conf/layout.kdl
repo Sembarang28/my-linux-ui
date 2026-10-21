@@ -1,0 +1,20 @@
+// Full-screen columns: every window takes the whole width of the monitor.
+// A newly opened app becomes a new column to the right in the SAME workspace;
+// scroll between columns with Mod+H/L, Mod+Left/Right or Mod+Shift+scroll.
+layout {
+    // Small gap between columns (a thin sliver of the neighbour stays visible)
+    gaps 6
+
+    center-focused-column "never"
+
+    // Only full width (cycle with Mod+R if you ever need more presets)
+    preset-column-widths {
+        proportion 1.0
+        proportion 0.5
+    }
+    default-column-width { proportion 1.0; }
+
+    // Colours / borders / shadows come from the active theme (see themes/ and theme.kdl)
+    struts {
+    }
+}

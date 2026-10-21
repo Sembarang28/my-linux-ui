@@ -1,0 +1,21 @@
+// Per-app window rules
+
+window-rule {
+    match app-id=r#"firefox$"# title="^Picture-in-Picture$"
+    open-floating true
+}
+
+// Block out sensitive apps from screen capture (disabled)
+/-window-rule {
+    match app-id=r#"^org\.keepassxc\.KeePassXC$"#
+    match app-id=r#"^org\.gnome\.World\.Secrets$"#
+    block-out-from "screen-capture"
+}
+
+
+// Quickshell utility windows (About This PC, Force Quit) float; System Settings stays a full-size column
+window-rule {
+    match app-id=r#"^org\.quickshell$"# title="^(About This PC|Force Quit Applications)$"
+    open-floating true
+    open-focused true
+}
